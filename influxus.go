@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Sirupsen/logrus"
 	influx "github.com/influxdata/influxdb/client/v2"
+	"github.com/sirupsen/logrus"
 )
 
 const (
