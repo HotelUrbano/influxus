@@ -14,7 +14,7 @@ func init() {
 		Addr: "http://localhost:8086",
 	})
 	if err != nil {
-		logrus.Fatalf("Error while creating the client: %v", err)
+		logrus.Warnf("Error while creating the client: %v", err)
 	}
 	// Create and add the hook.
 	hook, err := influxus.NewHook(
@@ -26,7 +26,7 @@ func init() {
 			BatchInterval:      1, // default is 5 seconds
 		})
 	if err != nil {
-		logrus.Fatalf("Error while creating the hook: %v", err)
+		logrus.Warnf("Error while creating the hook: %v", err)
 	}
 	// Add the hook to the standard logger.
 	logrus.StandardLogger().Hooks.Add(hook)
